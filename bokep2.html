@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hack Prank</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: black;
+            color: green;
+            text-align: center;
+            padding: 50px;
+        }
+        #form {
+            display: block;
+        }
+        #error {
+            display: none;
+            font-size: 24px;
+            animation: blink 1s infinite;
+        }
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div id="form">
+        <h1>Masukkan Data Anda Untuk Menonton Bokep Baru</h1>
+        <label for="nama">Nama:</label>
+        <input type="text" id="nama" required><br><br>
+        <label for="umur">Umur:</label>
+        <input type="number" id="umur" required><br><br>
+        <button onclick="lanjutkan()">Lanjutkan</button>
+    </div>
+    <div id="error">
+        <h1>ERROR: Sistem Terinfeksi!</h1>
+        <p>Data Anda telah dikirim ke hacker. Handphone Anda akan meledak dalam 3... 2... 1...</p>
+        
+    </div>
+
+    <script>
+        function lanjutkan() {
+            const nama = document.getElementById('nama').value;
+            const umur = document.getElementById('umur').value;
+            if (nama && umur) {
+                document.getElementById('form').style.display = 'none';
+                document.getElementById('error').style.display = 'block';
+            } else {
+                alert('Isi nama dan umur dulu!');
+            }
+        }
+    </script>
+</body>
+</html>
